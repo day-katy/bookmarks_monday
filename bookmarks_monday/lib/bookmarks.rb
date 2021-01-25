@@ -1,0 +1,3 @@
+class Bookmarks
+
+end
