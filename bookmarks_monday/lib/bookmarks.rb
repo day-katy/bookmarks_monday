@@ -1,19 +1,10 @@
+require 'pg'
 class Bookmarks
-
   def self.all
-    [
-      "https://devhints.io/vim",
-      "https://playground.diagram.codes/", 
-      "https://www.codewars.com/kata/latest/my-languages"
-    ]
+
+    connection = PG.connect(dbname: 'bookmark_manager')
+    result = connection.exec("SELECT * FROM bookmarks;")
+    result.map { |bookmark| bookmark['url'] }
+
   end
-    
-  #   initialize
-  #   @list_of_websites = []
-  # end
-
-  # def add_website(website_url)
-  #   @list_of_websites << website_url
-  # end
-
 end

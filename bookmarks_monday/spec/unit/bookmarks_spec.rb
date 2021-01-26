@@ -4,9 +4,9 @@ describe Bookmarks do
   describe "#all" do
     it "should return all bookmarks" do
       bookmarks = Bookmarks.all 
-       expect(bookmarks).to include("https://devhints.io/vim")
-       expect(bookmarks).to include("https://playground.diagram.codes/")
-        expect(bookmarks).to include("https://www.codewars.com/kata/latest/my-languages")
+       expect(bookmarks).to include("http://www.makersacademy.com")
+       expect(bookmarks).to include("http://google.com")
+        expect(bookmarks).to include("http://www.destroyallsoftware.com")
     end
   end
 end
